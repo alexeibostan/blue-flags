@@ -1,0 +1,17 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-xl-3 col-xs-12 col-sm-6 col-lg-4" *ngFor="let flag of blueFlags">
+            <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">{{flag.city}}</h4>
+                  <h6 class="card-subtitle mb-2 text-muted">{{flag.region}}</h6>
+                  <p class="card-text">{{flag.beach}} - La spiaggia si trova in provincia di {{flag.province}}</p>
+                  <a href="http://www.google.com/search?q={{(flag.city + ' ' + flag.beach).replace(' ', '+')}}" target="_blank" class="card-link">Cerca su google</a>
+                  <a href="https://nominatim.openstreetmap.org/ui/search.html?q={{flag.city.replace(' ', '+')}}" target="_blank" class="card-link" >Apri con Nominatim</a>
+                </div>
+              </div>
+        </div>
+    </div>
+</div>
+
+
